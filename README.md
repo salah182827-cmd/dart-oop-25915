@@ -8,28 +8,23 @@
 
 - D = 15
 - L = 5
-- Starting balance = 1240 RWF
-- Bus fare = 224 RWF
-- Student discount = 14%
+- Starting balance = 1150 RWF
+- Bus fare = 215 RWF
+- Student discount = 15%
 
 ## Output of main.dart
 
-```text
-Starting balance: 1240 RWF
-Bus fare: 224 RWF
-Student discount: 14%
-Error: name too short
-Owner: Mohamed abdalrahman mohamed IBRAHIM | Balance: 1240 RWF
-Owner: Mohamed abdalrahman mohamed IBRAHIM | Balance: 1240 RWF
+Owner: Mohamed abdalrahman mohamed IBRAHIM | Balance: 1150 RWF
+Owner: Mohamed abdalrahman mohamed IBRAHIM | Balance: 1150 RWF
 Error: top-up must be 500 to 50000 RWF
 Topped up 2000 RWF
-Paid 224 RWF
-Paid 224 RWF
-Owner: Mohamed abdalrahman mohamed IBRAHIM | Balance: 2792 RWF
-Student discount: 31 RWF
-Paid 193 RWF
-Owner: Mohamed abdalrahman mohamed IBRAHIM | Balance: 1047 RWF
-Student card: 14% off
+Paid 215 RWF
+Paid 215 RWF
+Owner: Mohamed abdalrahman mohamed IBRAHIM | Balance: 2720 RWF
+Student discount: 32 RWF
+Paid 183 RWF
+Owner: Mohamed abdalrahman mohamed IBRAHIM | Balance: 967 RWF
+Student card: 15% off
 ```
 
 ## Part 1: Why no setter for balance?

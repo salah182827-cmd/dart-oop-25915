@@ -11,7 +11,7 @@ class BusCard {
     return _owner;
   }
 
-  // TODO 1: getter for balance
+  
   int get balance {
     return _balance;
   }
@@ -28,7 +28,7 @@ class BusCard {
     print('Owner: $_owner | Balance: $_balance RWF');
   }
 
-  // TODO 2: topUp method
+ 
   void topUp(int amount) {
     if (amount >= 500 && amount <= 50000) {
       _balance = _balance + amount;
@@ -38,7 +38,6 @@ class BusCard {
     }
   }
 
-  // TODO 3: pay method
   void pay(int fare) {
     if (fare > _balance) {
       print('Card declined');
@@ -49,7 +48,7 @@ class BusCard {
   }
 }
 
-// Part 2: StudentCard
+
 class StudentCard extends BusCard {
   int _discount = 0;
 
@@ -63,7 +62,7 @@ class StudentCard extends BusCard {
     print('Student card: $_discount% off');
   }
 
-  // TODO 4: override pay
+ 
   @override
   void pay(int fare) {
     int off = fare * _discount ~/ 100;
@@ -72,7 +71,6 @@ class StudentCard extends BusCard {
   }
 }
 
-// Part 3: main()
 void main() {
   
 
@@ -94,7 +92,7 @@ void main() {
   card.pay(myBusFare);
   card.showInfo();
 
-  StudentCard student = StudentCard('Yves Nkurunziza', myStartingBalance, myDiscount);
+  StudentCard student = StudentCard('Mohamed abdalrahman mohamed IBRAHIM', myStartingBalance, myDiscount);
 
  
   student.pay(myBusFare);

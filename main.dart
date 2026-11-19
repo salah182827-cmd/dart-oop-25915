@@ -1,5 +1,5 @@
 class BusCard {
-  String _owner = '';
+  String _owner = 'Mohamed abdalrahman mohamed IBRAHIM';
   int _balance = 0;
 
   BusCard(String owner, int balance) {
@@ -78,8 +78,8 @@ void main() {
   int myBusFare = 215; 
   int myDiscount = 15;
 
-  BusCard card = BusCard('Ama', myStartingBalance); 
-  card.owner = 'Al'; 
+  BusCard card = BusCard('Mohamed abdalraman mohamed IBRAHIM', myStartingBalance); 
+  card.owner = 'Mohamed abdalrahman mohamed IBRAHIM'; 
   card.showInfo();
 
   card.owner = 'Mohamed abdalrahman mohamed IBRAHIM';

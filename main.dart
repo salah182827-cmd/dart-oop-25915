@@ -11,6 +11,7 @@ class BusCard {
     return _owner;
   }
 
+  // TODO 1: getter for balance
   int get balance {
     return _balance;
   }
@@ -27,6 +28,7 @@ class BusCard {
     print('Owner: $_owner | Balance: $_balance RWF');
   }
 
+  // TODO 2: topUp method
   void topUp(int amount) {
     if (amount >= 500 && amount <= 50000) {
       _balance = _balance + amount;
@@ -36,6 +38,7 @@ class BusCard {
     }
   }
 
+  // TODO 3: pay method
   void pay(int fare) {
     if (fare > _balance) {
       print('Card declined');
@@ -45,11 +48,12 @@ class BusCard {
     }
   }
 }
+
+// Part 2: StudentCard
 class StudentCard extends BusCard {
   int _discount = 0;
 
-  StudentCard(String owner, int balance, int discount)
-      : super(owner, balance) {
+  StudentCard(String owner, int balance, int discount) : super(owner, balance) {
     _discount = discount;
   }
 
@@ -59,52 +63,40 @@ class StudentCard extends BusCard {
     print('Student card: $_discount% off');
   }
 
+  // TODO 4: override pay
   @override
   void pay(int fare) {
     int off = fare * _discount ~/ 100;
-
     print('Student discount: $off RWF');
-
     super.pay(fare - off);
   }
 }
+
+// Part 3: main()
 void main() {
-  // My numbers
-  int D = 15;
-  int L = 5;
+  
 
-  int startingBalance = 1000 + (D * 10);
-  int busFare = 200 + D;
-  int discount = 10 + L;
+  int myStartingBalance = 1150; 
+  int myBusFare = 215; 
+  int myDiscount = 15;
 
-  print('Starting balance: $startingBalance RWF');
-  print('Bus fare: $busFare RWF');
-  print('Student discount: $discount%');
-
-  // Create a card
-  BusCard card = BusCard('Mohamed abdalrahman mohamed IBRAHIM', startingBalance);
-
-  card.owner = 'Al';
+  BusCard card = BusCard('Ama', myStartingBalance); 
+  card.owner = 'Al'; 
   card.showInfo();
 
-  // TODO 5
   card.owner = 'Mohamed abdalrahman mohamed IBRAHIM';
   card.showInfo();
 
-  // TODO 6
   card.topUp(100);
   card.topUp(2000);
 
-  // TODO 7
-  card.pay(busFare);
-  card.pay(busFare);
+  card.pay(myBusFare);
+  card.pay(myBusFare);
   card.showInfo();
 
-  // TODO 8
-  StudentCard studentCard =
-      StudentCard('Mohamed abdalrahman mohamed IBRAHIM', startingBalance, discount);
+  StudentCard student = StudentCard('Yves Nkurunziza', myStartingBalance, myDiscount);
 
-  // TODO 9
-  studentCard.pay(busFare);
-  studentCard.showInfo();
+ 
+  student.pay(myBusFare);
+  student.showInfo();
 }
